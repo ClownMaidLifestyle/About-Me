@@ -89,6 +89,6 @@ function quiz(){
             alert("Something went wrong!! Please try again");
         }
     }
-    alert("You got " + score + " out of 5!")
+    alert("You got " + score + " out of 5! \n thanks for playing, " + username)
 }
         
