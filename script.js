@@ -1,3 +1,6 @@
+let username;
+
 function load(){
-    prompt("Hello bestie, what shall I call you?");
+    username = prompt("Hello bestie, what shall I call you?");
+    alert("Welcome, Bestie " + username);
 }
