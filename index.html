@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script href="script.js"></script>
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="load()">
     <nav>
         <p>About Elisa "Ellie" "Smelly Ellie" Edson</p>
         <aside>
-            <button id="quiz_button">Take the Quiz</button>
+            <button id="quiz_button" onclick="load()">Take the Quiz</button>
         </aside>
     </nav>
     <main>
@@ -23,7 +23,9 @@
         </p>
 
         <h2>Music Map</h2>
-        <div><img id="musicmap" src="/images/musicmap.png"></div>
+        <div><img id="musicmap" src="./images/musicmap.png"></div>
+        <p>I like music! Above is a map of all the countries where an artist I like is from</p>
+        <p>I have unintentionally recognised the sovereignty of Hawai'i. I stand by this decision.</p>
 
         <h2>Educational History</h2>
         <p>
@@ -43,7 +45,7 @@
     </main>
 
     <footer>
-        <img id="banner" src="/images/banner.png">
+        <img id="banner" src="./images/banner.png">
     </footer>
 </body>
 </html>
