@@ -9,8 +9,9 @@ function quiz(){
     let answers = [];
     let answerCache = "";
     let question = 1;
-    answerCache = prompt("question 1 \n The newest country on my music map is Denmark")
+    
     while (question == 1){
+        answerCache = prompt("question 1 \n The newest country on my music map is Denmark");
         if (answerCache.toUpperCase == ("YES" || "Y")){
             alert("False! I'm a long time Situationsfornærmelse fan" + answerCache);
             question++;
