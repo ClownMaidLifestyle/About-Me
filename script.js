@@ -1,3 +1,4 @@
+"use strict";
 let username;
 
 function load(){
