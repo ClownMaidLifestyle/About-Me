@@ -5,7 +5,7 @@ let musicslide = 0;
 
 let musicTextArray = ["Canada: Bad Waitress - energetic bouncy Punk Rock, the kind of music that makes you want to punch and/or kiss someone",
                     "UK: Stoned Immaculate - music for people who like bucket hats and are torn between Oasis and Arctic Monkeys",
-                    "Denmark: Situationsfornaermelse - this band is absolutely filthy according to my Danish friend, even if you don't speak Danish the vocals have reckless energy",
+                    "Denmark: Situationsfornaermelse - The lead singer will make you want to learn Danish just to sing along - punk rock at it's finest",
                     "France: Videoclub - dreamy bedroom pop power couple, music to fall in love to",
                     "Haiti: Chouk Bwa & the Ångstromers - A traditional roots Haitian band that aren't afraid to incorporate the incredible modern innovations of fat bass",
                     "Kenya: kakai kilonzo & les kilimambogo brothers - Upbeat music that exhudes calmness and wellbeing, it is impossible to worry about something and listen to baba mkwe",
@@ -31,6 +31,18 @@ function musicplus(){
     let div = document.getElementById("musictext");
     div.innerHTML = musicTextArray[musicslide];
 }
+
+function musicminus(){
+    musicslide--;
+    if (musicslide == -1){
+        musicslide = 9;
+    }
+    document.getElementById("musicimage").src="./images/musicslides/slide" + musicslide + ".png";
+    let div = document.getElementById("musictext");
+    div.innerHTML = musicTextArray[musicslide];
+}
+
+
 /*QUIZ*/
 function quiz(){
     let score = 0;
@@ -116,6 +128,7 @@ function quiz(){
             alert("Something went wrong!! Please try again");
         }
     }
+
     alert("You got " + score + " out of 5! \n thanks for playing, " + username)
 }
         
