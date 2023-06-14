@@ -10,7 +10,7 @@ let musicTextArray = ["Canada: Bad Waitress - energetic bouncy Punk Rock, the ki
                     "France: Videoclub - dreamy bedroom pop power couple, music to fall in love to",
                     "Haiti: Chouk Bwa & the Ångstromers - A traditional roots Haitian band that aren't afraid to incorporate the incredible modern innovations of fat bass",
                     "Kenya: kakai kilonzo & les kilimambogo brothers - Upbeat music that exhudes calmness and wellbeing, it is impossible to worry about something and listen to baba mkwe",
-                    "Ukraine: I hate myself because - You know you're not above listening to edgy sadboy music, this is peak edgy sadboy music",
+                    "Ukraine: I hate myself because - You know you're not above listening to edgy sadboy music, this is peak edgy sadboy music (you may be worried from his location but don't worry - he's perfectly alright and still making music)",
                     "Sweden: Diablo Swing Orchestra - Metal, Swing and Opera had a baby and that baby was raised by a goth. I promise you've never heard anything like it",
                     "Zambia: Amanaz - Zambia had a thriving music scene for a precious few years in the 70s and the result was pure psychedelic groove",
                     "Germany: Swiss - the perfect introduction to German political rap/rock - the whole genre is golden and the punchy language is excellently suited",
@@ -137,6 +137,7 @@ function quiz(){
             alert("So True Bestie!");
             question++;
             score++;
+            chances = 6;
         }
         else if (answerCache > 20 && chances > 0){
             chances--;
@@ -147,7 +148,34 @@ function quiz(){
             alert("False! too low :( " + chances + " chances left");
         }
         else if (chances == 0){
-            alert("sorry! out of chances </3")
+            alert("sorry! out of chances </3");
+            question++;
+
+        }
+        else{
+            alert("Something went wrong!! Please try again");
+        }
+    }
+    console.log(question);
+    while (question == 7){
+        let sevenAnswers = ["WORCESTER","LEEDS","IPSWICH"];
+        answerCache = prompt("question 7 \n Where have I lived?").toUpperCase();
+
+        if (chances > 0){
+            for(let i = 0; i < 3; i++){
+                if(answerCache == sevenAnswers[i]){
+                    alert("So true bestie!");
+                    question++;
+                    score++;
+                }
+            }
+            if(question==7){
+                chances--;
+                alert("not quite bestie :( you have " + chances + " guesses left");
+            }
+        }
+        else if (chances == 0){
+            alert("you're out of guesses :(");
             question++;
         }
         else{
@@ -155,6 +183,6 @@ function quiz(){
         }
     }
 
-    alert("You got " + score + " out of 7! \n thanks for playing, " + username)
+    alert("You got " + score + " out of 7! \n thanks for playing, " + username);
 }
         
