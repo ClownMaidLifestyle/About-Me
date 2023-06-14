@@ -1,6 +1,7 @@
 "use strict";
 let username;
 let musicslide = 0;
+let chances = 4;
 /*Initialise*/
 
 let musicTextArray = ["Canada: Bad Waitress - energetic bouncy Punk Rock, the kind of music that makes you want to punch and/or kiss someone",
@@ -129,6 +130,31 @@ function quiz(){
         }
     }
 
-    alert("You got " + score + " out of 5! \n thanks for playing, " + username)
+    while (question == 6){
+        answerCache = prompt("question 6 \n How many countries are highlighted on my music map?").toUpperCase();
+
+        if (answerCache == "20"){
+            alert("So True Bestie!");
+            question++;
+            score++;
+        }
+        else if (answerCache > 20 && chances > 0){
+            chances--;
+            alert("False! too high :( " + chances + " chances left");
+        }
+        else if (answerCache < 20 && chances > 0){
+            chances--;
+            alert("False! too low :( " + chances + " chances left");
+        }
+        else if (chances == 0){
+            alert("sorry! out of chances </3")
+            question++;
+        }
+        else{
+            alert("Something went wrong!! Please try again");
+        }
+    }
+
+    alert("You got " + score + " out of 7! \n thanks for playing, " + username)
 }
         
