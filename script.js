@@ -53,7 +53,7 @@ function quiz(){
     while (question == 1){
         answerCache = prompt("question 1 \n The newest country on my music map is Denmark").toUpperCase();
         if (answerCache == "YES" || answerCache == "Y"){
-            alert("False! I'm a long time Situationsfornærmelse fan" + answerCache);
+            alert("False! I'm a long time Situationsfornærmelse fan");
             question++;
         }
         else if (answerCache == "NO" || answerCache == "N"){
