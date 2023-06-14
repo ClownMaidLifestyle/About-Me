@@ -13,12 +13,12 @@ let musicTextArray = ["Canada: Bad Waitress - energetic bouncy Punk Rock, the ki
                     "Sweden: Diablo Swing Orchestra - Metal, Swing and Opera had a baby and that baby was raised by a goth. I promise you've never heard anything like it",
                     "Zambia: Amanaz - Zambia had a thriving music scene for a precious few years in the 70s and the result was pure psychedelic groove",
                     "Germany: Swiss - the perfect introduction to German political rap/rock - the whole genre is golden and the punchy language is excellently suited",
-                    "NAN - ARRAY EXCEEDED"]
+                    "NAN - ARRAY EXCEEDED"];
 
 function load(){
     username = prompt("Hello bestie, what shall I call you?");
     alert("Welcome, Bestie " + username);
-    let div = document.getElementById("musictext")
+    let div = document.getElementById("musictext");
     div.innerHTML = musicTextArray[musicslide];
 }
 
@@ -28,7 +28,7 @@ function musicplus(){
         musicslide = 0;
     }
     document.getElementById("musicimage").src="./images/musicslides/slide" + musicslide + ".png";
-    let div = document.getElementById("musictext")
+    let div = document.getElementById("musictext");
     div.innerHTML = musicTextArray[musicslide];
 }
 /*QUIZ*/
