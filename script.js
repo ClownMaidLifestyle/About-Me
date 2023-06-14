@@ -1,11 +1,37 @@
 "use strict";
 let username;
+let musicslide = 0;
+/*Initialise*/
+
+let musicTextArray = ["Canada: Bad Waitress - energetic bouncy Punk Rock, the kind of music that makes you want to punch and/or kiss someone",
+                    "UK: Stoned Immaculate - music for people who like bucket hats and are torn between Oasis and Arctic Monkeys",
+                    "Denmark: Situationsfornaermelse - this band is absolutely filthy according to my Danish friend, even if you don't speak Danish the vocals have reckless energy",
+                    "France: Videoclub - dreamy bedroom pop power couple, music to fall in love to",
+                    "Haiti: Chouk Bwa & the Ångstromers - A traditional roots Haitian band that aren't afraid to incorporate the incredible modern innovations of fat bass",
+                    "Kenya: kakai kilonzo & les kilimambogo brothers - Upbeat music that exhudes calmness and wellbeing, it is impossible to worry about something and listen to baba mkwe",
+                    "Ukraine: I hate myself because - You know you're not above listening to edgy sadboy music, this is peak edgy sadboy music",
+                    "Sweden: Diablo Swing Orchestra - Metal, Swing and Opera had a baby and that baby was raised by a goth. I promise you've never heard anything like it",
+                    "Zambia: Amanaz - Zambia had a thriving music scene for a precious few years in the 70s and the result was pure psychedelic groove",
+                    "Germany: Swiss - the perfect introduction to German political rap/rock - the whole genre is golden and the punchy language is excellently suited",
+                    "NAN - ARRAY EXCEEDED"]
 
 function load(){
     username = prompt("Hello bestie, what shall I call you?");
     alert("Welcome, Bestie " + username);
+    let div = document.getElementById("musictext")
+    div.innerHTML = musicTextArray[musicslide];
 }
 
+function musicplus(){
+    musicslide++;
+    if (musicslide == 10){
+        musicslide = 0;
+    }
+    document.getElementById("musicimage").src="./images/musicslides/slide" + musicslide + ".png";
+    let div = document.getElementById("musictext")
+    div.innerHTML = musicTextArray[musicslide];
+}
+/*QUIZ*/
 function quiz(){
     let score = 0;
     let answerCache = "";
