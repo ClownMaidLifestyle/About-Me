@@ -49,7 +49,31 @@ function quiz(){
     let score = 0;
     let answerCache = "";
     let question = 1;
+    const yesnoQuestions =[
+        "question 1 \n The newest country on my music map is Denmark",
+        "question 2 \n I can make a banging pizza",
+        "question 3 \n I have a flag collection",
+        "question 4 \n I am from bradford",
+        "question 5 \n I need a nap",
+    ];
+    const yesnoAnswers =[
+        "NO","YES","YES","NO","YES"
+    ];
+
+    for(i; i <5; i++){
+        answerCache = prompt(yesnoQuestions[i]);
+        if (answerCache == yesnoAnswers[i]){
+            alert("so true bestie!");
+            question++;
+            score++;
+        }
+        else{
+            alert("sorry bestie :(");
+            question++;
+        }
+    }
     
+    /*
     while (question == 1){
         answerCache = prompt("question 1 \n The newest country on my music map is Denmark").toUpperCase();
         if (answerCache == "YES" || answerCache == "Y"){
@@ -129,6 +153,7 @@ function quiz(){
             alert("Something went wrong!! Please try again");
         }
     }
+    */
 
     while (question == 6){
         answerCache = prompt("question 6 \n How many countries are highlighted on my music map?").toUpperCase();
@@ -156,7 +181,7 @@ function quiz(){
             alert("Something went wrong!! Please try again");
         }
     }
-    console.log(question);
+
     while (question == 7){
         let sevenAnswers = ["WORCESTER","LEEDS","IPSWICH"];
         answerCache = prompt("question 7 \n Where have I lived?").toUpperCase();
